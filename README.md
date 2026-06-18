@@ -47,9 +47,13 @@ Then in the sidebar: connect to IB → enter a symbol (`SPY`) and duration (`2 Y
 
 ## Quant for babies
 
-No math, no jargon. Just the idea.
+No math, no jargon. Just the idea — told as a bedtime story.
+
+![BUMPY — a bedtime story about bouncy things](assets/babies/01-cover.png)
 
 **Volatility = how bumpy the ride is.** Some stocks sit still like a parked car. Others bounce around like a kid on a trampoline. Volatility is a number for how much something jumps around — and it doesn't care *which way*, only *how much*.
+
+![Some things sit still. Some things bounce.](assets/babies/02-volatility.png)
 
 **There are two bumpiness numbers, and they're different.**
 - One says how bumpy it *was* yesterday. (We can just look. No arguing.) → **historical vol**
@@ -57,13 +61,23 @@ No math, no jargon. Just the idea.
 
 Think of weather: historical vol is *"it rained 3 days last week."* Implied vol is *"the forecast says 80% chance of rain."* One is what happened; one is what people expect.
 
+![What happened versus what we expect](assets/babies/03-implied-vs-historical.png)
+
 **People overpay for the scary forecast.** Just like you buy umbrella insurance even on sunny days, investors pay extra to protect against a market storm. So the "forecast" number (implied) is usually a little *higher* than the rain that actually falls (historical). That little gap is free-ish money for the person *selling* the umbrellas — most of the time. The catch: every once in a while there's a real hurricane, and the umbrella-seller pays big. That's the deal. This gap is the **volatility risk premium.**
+
+![Pay a little now, sleep easy tonight](assets/babies/04-risk-premium.png)
 
 **Bumpiness snaps back to normal.** When a stock goes crazy-jumpy, it almost always calms down soon after. When it gets sleepy-quiet, it eventually wakes up. It's like a stretched rubber band pinging back to the middle. So if bumpiness is *way* high right now, the smart bet is "it'll probably come down." This is **mean reversion**, and it's the whole reason this dashboard exists.
 
+![Way up high always comes back down](assets/babies/05-mean-reversion.png)
+
 **There are calm seasons and stormy seasons.** In calm times, things stay calm for ages. In stormy times, panics flare up and die down fast. The same rubber band snaps back *harder* during storms. So we measure the calm and stormy periods separately instead of mushing them together. These are **regimes.**
 
+![We count the calm and the storm apart](assets/babies/06-regimes.png)
+
 **That's it.** The dashboard just measures: *how bumpy are we right now (vs. usual)?*, *how fast will it snap back?*, and *how big is the umbrella-seller's gap?* Everything below is the same five ideas with the actual numbers attached.
+
+![The End](assets/babies/07-the-end.png)
 
 ---
 

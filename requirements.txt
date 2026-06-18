@@ -1,0 +1,11 @@
+# Floors reflect what's verified working in this project (and are <= installed versions).
+streamlit>=1.26      # st.toggle needs 1.26+
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+plotly>=5.18
+
+# ibapi: the PyPI build is IB's 9.81 (community upload) — fine for historical IV/HV.
+# For the current 10.x, install from IB's TWS API download:
+#   cd "C:\TWS API\source\pythonclient" && pip install .
+ibapi>=9.81

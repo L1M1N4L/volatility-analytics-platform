@@ -11,6 +11,7 @@ It's also a teaching tool. The [Volatility, explained](#volatility-explained) se
 ## Contents
 
 - [Quick start](#quick-start)
+- [Quant for babies](#quant-for-babies) — the whole idea in plain words
 - [Volatility, explained](#volatility-explained) — the concepts
   - [1. What volatility is](#1-what-volatility-is)
   - [2. Two kinds: implied vs. historical](#2-two-kinds-implied-vs-historical)
@@ -41,6 +42,28 @@ streamlit run iv_dashboard.py
 ```
 
 Then in the sidebar: connect to IB → enter a symbol (`SPY`) and duration (`2 Y`) → pick your series → **Query data**.
+
+---
+
+## Quant for babies
+
+No math, no jargon. Just the idea.
+
+🎢 **Volatility = how bumpy the ride is.** Some stocks sit still like a parked car. Others bounce around like a kid on a trampoline. Volatility is a number for how much something jumps around — and it doesn't care *which way*, only *how much*.
+
+🔮 **There are two bumpiness numbers, and they're different.**
+- One says how bumpy it *was* yesterday. (We can just look. No arguing.) → **historical vol**
+- One says how bumpy people *think* it'll be tomorrow. (A guess, baked into prices.) → **implied vol**
+
+Think of weather: historical vol is *"it rained 3 days last week."* Implied vol is *"the forecast says 80% chance of rain."* One is what happened; one is what people expect.
+
+💸 **People overpay for the scary forecast.** Just like you buy umbrella insurance even on sunny days, investors pay extra to protect against a market storm. So the "forecast" number (implied) is usually a little *higher* than the rain that actually falls (historical). That little gap is free-ish money for the person *selling* the umbrellas — most of the time. The catch: every once in a while there's a real hurricane, and the umbrella-seller pays big. That's the deal. This gap is the **volatility risk premium.**
+
+🧲 **Bumpiness snaps back to normal.** When a stock goes crazy-jumpy, it almost always calms down soon after. When it gets sleepy-quiet, it eventually wakes up. It's like a stretched rubber band pinging back to the middle. So if bumpiness is *way* high right now, the smart bet is "it'll probably come down." This is **mean reversion**, and it's the whole reason this dashboard exists.
+
+🌤️ **There are calm seasons and stormy seasons.** In calm times, things stay calm for ages. In stormy times, panics flare up and die down fast. The same rubber band snaps back *harder* during storms. So we measure the calm and stormy periods separately instead of mushing them together. These are **regimes.**
+
+**That's it.** The dashboard just measures: *how bumpy are we right now (vs. usual)?*, *how fast will it snap back?*, and *how big is the umbrella-seller's gap?* Everything below is the same five ideas with the actual numbers attached.
 
 ---
 
